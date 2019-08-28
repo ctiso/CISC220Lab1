@@ -1,19 +1,20 @@
 /*
- * Lab1.cpp
- *
- *  Created on: Aug 29, 2019
- *      Author: tisoc
+ * Christopher Tiso
+ * Agnijit Das
+ *  8/27/29
+ *     This file contains functions for lab 1. The functions aren’t necessarily related
+ *      in any way other than that they are required for lab 1.
  */
 
 #include<iostream>
 using namespace std;
 
 
-int newfunc();
 void Stars();
 bool isPrime(int num);
 int sumThreeHundred();
 int sumToHundredGrand();
+void Collatz();
 
 int main(){
 	cout <<"HELLO WORLD"<< endl;
@@ -27,6 +28,7 @@ int main(){
 	sumThreeHundred();
 	//
 	cout<<sumToHundredGrand()<<endl;
+	Collatz();
 	Stars();
 	return 0;
 }
@@ -68,3 +70,19 @@ int sumToHundredGrand(){
 	}
 	return count;
 }
+void  Collatz(){
+	 int num;
+	 cin >> num;
+	 int loop=0;
+	 while(num !=1){
+		 if(num%2 ==0){
+			 num=num/2;
+			 loop++;
+		 }
+		 else{
+			 num=(num*3)+1;
+		 }
+	 }
+	 cout << loop << endl;
+}
+
