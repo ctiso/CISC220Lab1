@@ -1,5 +1,5 @@
 /*
- * Christopher Tiso
+ * Christopher Tiso and Bobby Stahl
  * Agnijit Das
  *  8/27/29
  *     This file contains functions for lab 1. The functions aren’t necessarily related
@@ -16,6 +16,10 @@ int sumThreeHundred();
 int sumToHundredGrand();
 void Collatz();
 void LeapYear();
+void TimesTable(int num);
+void OneToTwelve();
+void CollatzCheck(int small,int big);
+void PrintX(int num);
 
 int main(){
 	cout <<"HELLO WORLD"<< endl;
@@ -29,9 +33,19 @@ int main(){
 	sumThreeHundred();
 	//This counts how many times it takes to sum consecutive numbers together until they pass 100,000
 	cout<<sumToHundredGrand()<<endl;
-	//This will find out how many Collatz loops it takes to go from any sort of number to 1
+	//This Multiplies a given number from 1 to 12
+	TimesTable(5);
+	TimesTable(3);
+	TimesTable(10);
+	//This Prints out the times table between 1 and 12
+	OneToTwelve();
+	//This will find out how many loops it takes to make the Collatz conjecture hold true
 	Collatz();
+	//This finds every leap year for the next 400 years
 	LeapYear();
+	//Checks Collatz Conjecture at every number including and between these numbers
+	CollatzCheck(6,8);
+	 PrintX(4);
 	Stars();
 	return 0;
 }
@@ -72,6 +86,20 @@ int sumToHundredGrand(){
 	}
 	return count;
 }
+void TimesTable(int num){
+	for(int mult=1;mult<=12;mult++){
+		cout<< mult*num;
+		cout<< " ";
+	}
+	cout<<""<<endl;
+}
+
+void OneToTwelve(){
+	for(int count =1;count<=12;count++){
+		TimesTable(count);
+	}
+}
+
 void  Collatz(){
 	 int num;
 	 cout<<"Type Number for Collatz"<< endl;
@@ -104,4 +132,30 @@ void LeapYear(){
 		year++;
 	}
 }
+void PrintX(int num){
+	if(num%2==0){
+		num++;
+	}
+	int total=num*2 -1;
+	for(int starCount=0;starCount<=total;starCount++){
 
+	}
+}
+
+void CollatzCheck(int small,int big){
+	while(small<=big){
+		int num=small;
+		while(num !=1){
+				 if(num%2 ==0){
+					 num=num/2;
+				 }
+				 else{
+					 num=(num*3)+1;
+				 }
+
+		}
+		small++;
+		cout << "Collatz Conjecture is still working"<< endl;
+	}
+
+}
