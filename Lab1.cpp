@@ -15,6 +15,7 @@ bool isPrime(int num);
 int sumThreeHundred();
 int sumToHundredGrand();
 void Collatz();
+void LeapYear();
 
 int main(){
 	cout <<"HELLO WORLD"<< endl;
@@ -26,13 +27,14 @@ int main(){
 	cout << isPrime(83)<< endl;
 	//This should print out the sum of 1 to 300 which is 45150 as well as put 15 numbers in between at 20 term differences
 	sumThreeHundred();
-	//
+	//This counts how many times it takes to sum consecutive numbers together until they pass 100,000
 	cout<<sumToHundredGrand()<<endl;
+	//This will find out how many Collatz loops it takes to go from any sort of number to 1
 	Collatz();
+	LeapYear();
 	Stars();
 	return 0;
 }
-
 
 
 void Stars(){
@@ -72,6 +74,7 @@ int sumToHundredGrand(){
 }
 void  Collatz(){
 	 int num;
+	 cout<<"Type Number for Collatz"<< endl;
 	 cin >> num;
 	 int loop=0;
 	 while(num !=1){
@@ -84,5 +87,21 @@ void  Collatz(){
 		 }
 	 }
 	 cout << loop << endl;
+}
+void LeapYear(){
+	int year=2019;
+	while(year<=2419){
+		if(year%4==0){
+			if(year%100==0){
+				if(year%400==0){
+					cout << year << endl;
+				}
+			}
+			else{
+				cout << year << endl;
+			}
+		}
+		year++;
+	}
 }
 
