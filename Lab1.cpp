@@ -47,7 +47,6 @@ bool isPrime(int num){
 	}
 	return prime;
 }
-
 int sumThreeHundred(){
 	int count=1;
 	int sum=0;
