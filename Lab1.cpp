@@ -23,13 +23,12 @@ void PrintX(int num);
 
 int main(){
 	cout <<"HELLO WORLD"<< endl;
-	//This input of 11 should come out to 1 because it is a prime number
+	//The function checks if the number given is a prime number or not
+	//isPrime(11)->1 isPrime(24)->0  isPrime(83)->1
 	cout << isPrime(11)<< endl;
-	//This input of 24 should come out to 0 because it is not a prime number
 	cout << isPrime(24)<< endl;
-	//This input of 83 should come out to 1 because it is a prime number
 	cout << isPrime(83)<< endl;
-	//This should print out the sum of 1 to 300 which is 45150 as well as put 15 numbers in between at 20 term differences
+	//This should print out the sum of 1 to 300 which is 45150 as well as print 15 numbers in between at 20 term differences
 	sumThreeHundred();
 	//This counts how many times it takes to sum consecutive numbers together until they pass 100,000
 	cout<<sumToHundredGrand()<<endl;
