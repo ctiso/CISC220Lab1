@@ -134,7 +134,10 @@ void LeapYear(){
 void PrintX(int num){
 	int starCount=num;
 	if(starCount%2==0){
-		starCount++;
+		starCount+=3;
+	}
+	else{
+		starCount+=2;
 	}
 	for(int i = 1;i<= starCount;i++)
 	    {
