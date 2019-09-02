@@ -44,6 +44,7 @@ int main(){
 	LeapYear();
 	//Checks Collatz Conjecture at every number including and between these numbers
 	CollatzCheck(6,8);
+	//This prints an x made out of stars. The size is dependent on what number put in
 	 PrintX(5);
 	Stars();
 	return 0;
