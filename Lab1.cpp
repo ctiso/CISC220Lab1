@@ -44,7 +44,7 @@ int main(){
 	LeapYear();
 	//Checks Collatz Conjecture at every number including and between these numbers
 	CollatzCheck(6,8);
-	 PrintX(4);
+	 PrintX(5);
 	Stars();
 	return 0;
 }
@@ -132,13 +132,24 @@ void LeapYear(){
 	}
 }
 void PrintX(int num){
-	if(num%2==0){
-		num++;
+	int starCount=num;
+	if(starCount%2==0){
+		starCount++;
 	}
-	int total=num*2 -1;
-	for(int starCount=0;starCount<=total;starCount++){
-
-	}
+	for(int i = 1;i<= starCount;i++)
+	    {
+	        for(int j = 1;j<= starCount;j++)
+	        {
+	            if((i == j)||(j==(starCount+1)-i))
+	            {
+	                cout << "*";
+	            }
+	            else{
+	                cout << " ";
+	            }
+	        }
+	        cout<< endl;
+	    }
 }
 
 void CollatzCheck(int small,int big){
